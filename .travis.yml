@@ -25,12 +25,6 @@ env:
     version: 29
   - distribution: fedora
     version: 28
-  - distribution: fedora
-    version: 27
-  - distribution: fedora
-    version: 26
-  - distribution: fedora
-    version: 25
 
 services:
   - docker
