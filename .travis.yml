@@ -1,4 +1,7 @@
 ---
+language: shell
+os: linux
+dist: bionic
 env:
   - distribution: centos
     version: 8
