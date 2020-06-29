@@ -7,6 +7,14 @@ env:
     version: 8
   - distribution: centos
     version: 7
+  - distribution: debian
+    version: buster
+  - distribution: ubuntu
+    version: focal
+  - distribution: ubuntu
+    version: bionic
+  - distribution: ubuntu
+    version: xenial
   - distribution: fedora
     version: 32
   - distribution: fedora
@@ -23,12 +31,6 @@ env:
     version: 26
   - distribution: fedora
     version: 25
-  - distribution: ubuntu
-    version: bionic
-  - distribution: ubuntu
-    version: xenial
-  - distribution: debian
-    version: buster
 
 services:
   - docker
