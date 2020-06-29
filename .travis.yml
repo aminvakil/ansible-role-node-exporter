@@ -26,8 +26,6 @@ env:
     version: xenial
   - distribution: debian
     version: buster
-  - distribution: debian
-    version: stretch
 
 services:
   - docker
