@@ -2,6 +2,8 @@
 Prometheus Node Exporter Installation
 
 ## Instructions
-Change roles/node_exporter/vars/main.yml
-Change hosts
+```
+vi roles/node_exporter/vars/main.yml
+vi hosts
 ansible-playbook -i hosts node.yml
+```
