@@ -9,8 +9,8 @@ env:
     version: 7
   - distribution: debian
     version: buster
-  - distribution: ubuntu
-    version: focal
+    #  - distribution: ubuntu
+    #    version: focal
   - distribution: ubuntu
     version: bionic
   - distribution: ubuntu
