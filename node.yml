@@ -1,7 +1,4 @@
 ---
- - hosts: servers
-   gather_facts: no
-   become: yes
-   strategy: debug
+ - hosts: all
    roles:
      - node_exporter
