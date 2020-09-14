@@ -16,9 +16,8 @@
 
 - name: Download Node exporter version {{ node_exporter_version }}
   get_url:
-    src: https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz
+    url: https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz
     dest: /tmp
-    remote_src: yes
     owner: node_exporter
     group: node_exporter
     checksum: sha256:https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/sha256sums.txt
