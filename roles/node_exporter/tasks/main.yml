@@ -14,13 +14,23 @@
     shell: /sbin/nologin
     system: yes
 
-- name: Download and extract Node exporter version {{ node_exporter_version }}
-  unarchive:
+- name: Download Node exporter version {{ node_exporter_version }}
+  get_url:
     src: https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz
     dest: /tmp
     remote_src: yes
     owner: node_exporter
     group: node_exporter
+    checksum: sha256:https://github.com/prometheus/node_exporter/releases/download/v{{ node_exporter_version }}/sha256sums.txt
+    mode: 0600
+
+- name: Extract Node exporter version {{ node_exporter_version }}
+  unarchive:
+    src: /tmp/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz
+    dest: /tmp
+    owner: node_exporter
+    group: node_exporter
+    mode: 0600
 
 - name: Copy node_exporter to /usr/local/bin
   copy:
@@ -35,6 +45,7 @@
   template:
     src: node_exporter.service.j2
     dest: /etc/systemd/system/node_exporter.service
+    mode: 0644
 
 - name: Enable node_exporter service
   systemd:
