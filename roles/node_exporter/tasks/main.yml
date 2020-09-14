@@ -27,6 +27,7 @@
   unarchive:
     src: /tmp/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz
     dest: /tmp
+    remote_src: yes
     owner: node_exporter
     group: node_exporter
     mode: 0600
@@ -38,7 +39,7 @@
     remote_src: yes
     owner: node_exporter
     group: node_exporter
-    mode: preserve
+    mode: 0700
 
 - name: Copy systemd service to server
   template:
