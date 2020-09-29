@@ -1,5 +1,6 @@
 ---
-language: shell
+language: python
+services: docker
 os: linux
 dist: bionic
 env:
@@ -14,8 +15,6 @@ env:
   - MOLECULE_DISTRO: fedora30
   - MOLECULE_DISTRO: fedora29
 
-services:
-  - docker
 install:
   - pip install molecule yamllint ansible-lint docker
 script:
