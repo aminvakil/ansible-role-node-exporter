@@ -7,9 +7,9 @@ env:
   - MOLECULE_DISTRO: centos8
   - MOLECULE_DISTRO: centos7
   - MOLECULE_DISTRO: debian10
-  - MOLECULE_DISTRO: ubuntu20
-  - MOLECULE_DISTRO: ubuntu18
-  - MOLECULE_DISTRO: ubuntu16
+  - MOLECULE_DISTRO: ubuntu20.04
+  - MOLECULE_DISTRO: ubuntu18.04
+  - MOLECULE_DISTRO: ubuntu16.04
   - MOLECULE_DISTRO: fedora32
   - MOLECULE_DISTRO: fedora31
   - MOLECULE_DISTRO: fedora30
