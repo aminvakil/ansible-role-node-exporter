@@ -1,3 +1,4 @@
+---
 - name: Create group node_exporter
   group:
     name: node_exporter
