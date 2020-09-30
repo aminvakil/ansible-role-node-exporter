@@ -1,9 +1,0 @@
-FROM debian:buster
-
-RUN apt-get update -y && apt-get install -y --no-install-recommends \
-    ansible \
-    systemd \
-    python \
- && rm -rf /var/lib/apt/lists/*
-
-ENTRYPOINT ["/bin/systemd"]
