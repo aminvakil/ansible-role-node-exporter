@@ -10,12 +10,13 @@ env:
   - MOLECULE_DISTRO: ubuntu20.04
   - MOLECULE_DISTRO: ubuntu18.04
   - MOLECULE_DISTRO: ubuntu16.04
+  - MOLECULE_DISTRO: fedora33
   - MOLECULE_DISTRO: fedora32
   - MOLECULE_DISTRO: fedora31
   - MOLECULE_DISTRO: fedora30
   - MOLECULE_DISTRO: fedora29
 
 install:
-  - pip install molecule yamllint ansible-lint docker
+  - pip install molecule molecule-docker yamllint ansible-lint docker
 script:
   - molecule test
