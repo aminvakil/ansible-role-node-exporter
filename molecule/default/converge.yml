@@ -1,2 +1,5 @@
 ---
-- import_playbook: ../../node.yml
+- name: Converge
+  hosts: all
+  roles:
+    - role: node-exporter
