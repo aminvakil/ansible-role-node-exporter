@@ -1,0 +1,26 @@
+---
+galaxy_info:
+  author: Amin Vakil
+  description: Linux Enthusiast
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+        - 8
+    - name: Fedora
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - monitoring
+    - node-exporter
+    - prometheus
