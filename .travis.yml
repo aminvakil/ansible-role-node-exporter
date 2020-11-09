@@ -22,3 +22,5 @@ before_script:
   - cd .. && mv ansible-node-exporter node_exporter && cd node_exporter
 script:
   - molecule test
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
