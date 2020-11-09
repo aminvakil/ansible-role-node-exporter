@@ -18,5 +18,7 @@ env:
 
 install:
   - pip install molecule molecule-docker yamllint ansible-lint docker
+before_script:
+  - cd .. && mv ansible-node-exporter node_exporter && cd node_exporter
 script:
   - molecule test
