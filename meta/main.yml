@@ -22,5 +22,5 @@ galaxy_info:
 
   galaxy_tags:
     - monitoring
-    - node-exporter
+    - node_exporter
     - prometheus
