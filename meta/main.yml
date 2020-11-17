@@ -3,7 +3,7 @@ galaxy_info:
   author: Amin Vakil
   role_name: node_exporter
   description: Prometheus Node Exporter Installer
-  license: MIT
+  license: GPL-3.0-only
   min_ansible_version: 2.1
   platforms:
     - name: EL
