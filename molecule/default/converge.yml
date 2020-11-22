@@ -2,4 +2,4 @@
 - name: Converge
   hosts: all
   roles:
-    - role: node_exporter
+    - role: aminvakil.node_exporter
