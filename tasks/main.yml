@@ -48,7 +48,7 @@
     dest: /etc/systemd/system/node_exporter.service
     mode: 0644
 
-- name: Enable node_exporter service
+- name: Enable and start node_exporter service
   systemd:
     name: node_exporter
     daemon_reload: yes
