@@ -54,15 +54,11 @@ jobs:
             playbook: converge.yml
           - distro: ubuntu16.04
             playbook: converge.yml
+          - distro: fedora34
+            playbook: converge.yml
           - distro: fedora33
             playbook: converge.yml
           - distro: fedora32
-            playbook: converge.yml
-          - distro: fedora31
-            playbook: converge.yml
-          - distro: fedora30
-            playbook: converge.yml
-          - distro: fedora29
             playbook: converge.yml
 
     steps:
