@@ -41,12 +41,14 @@
     owner: node_exporter
     group: node_exporter
     mode: 0700
+  notify: restart node_exporter
 
 - name: Copy systemd service to server
   template:
     src: node_exporter.service.j2
     dest: /etc/systemd/system/node_exporter.service
     mode: 0644
+  notify: systemd daemon-reload
 
 - name: Enable and start node_exporter service
   systemd:
