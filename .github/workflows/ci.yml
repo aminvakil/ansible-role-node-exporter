@@ -43,25 +43,15 @@ jobs:
       matrix:
         include:
           - distro: rockylinux8
-            playbook: converge.yml
           - distro: centos8
-            playbook: converge.yml
           - distro: centos7
-            playbook: converge.yml
           - distro: debian10
-            playbook: converge.yml
           - distro: ubuntu20.04
-            playbook: converge.yml
           - distro: ubuntu18.04
-            playbook: converge.yml
           - distro: ubuntu16.04
-            playbook: converge.yml
           - distro: fedora34
-            playbook: converge.yml
           - distro: fedora33
-            playbook: converge.yml
           - distro: fedora32
-            playbook: converge.yml
 
     steps:
       - name: Check out the codebase.
@@ -83,7 +73,6 @@ jobs:
           PY_COLORS: '1'
           ANSIBLE_FORCE_COLOR: '1'
           MOLECULE_DISTRO: ${{ matrix.distro }}
-          MOLECULE_PLAYBOOK: ${{ matrix.playbook }}
 
   deploy:
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
