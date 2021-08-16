@@ -45,6 +45,7 @@ jobs:
           - distro: rockylinux8
           - distro: centos8
           - distro: centos7
+          - distro: debian11
           - distro: debian10
           - distro: ubuntu20.04
           - distro: ubuntu18.04
