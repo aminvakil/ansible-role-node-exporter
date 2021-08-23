@@ -3,17 +3,17 @@
   group:
     name: node_exporter
     state: present
-    system: yes
+    system: true
 
 - name: Create user node_exporter
   user:
     name: node_exporter
     group: node_exporter
     comment: Node Exporter
-    create_home: no
-    password_lock: yes
+    create_home: false
+    password_lock: true
     shell: /sbin/nologin
-    system: yes
+    system: true
 
 - name: Download Node exporter version {{ node_exporter_version }}
   get_url:
@@ -28,7 +28,7 @@
   unarchive:
     src: /tmp/node_exporter-{{ node_exporter_version }}.linux-amd64.tar.gz
     dest: /tmp
-    remote_src: yes
+    remote_src: true
     owner: node_exporter
     group: node_exporter
     mode: 0600
@@ -37,7 +37,7 @@
   copy:
     src: /tmp/node_exporter-{{ node_exporter_version }}.linux-amd64/node_exporter
     dest: /usr/local/bin/node_exporter
-    remote_src: yes
+    remote_src: true
     owner: node_exporter
     group: node_exporter
     mode: 0700
@@ -53,6 +53,6 @@
 - name: Enable and start node_exporter service
   systemd:
     name: node_exporter
-    daemon_reload: yes
-    enabled: yes
+    daemon_reload: true
+    enabled: true
     state: started
