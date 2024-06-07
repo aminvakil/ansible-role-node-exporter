@@ -42,9 +42,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: rockylinux8
-          - distro: centos8
-          - distro: centos7
           - distro: debian12
           - distro: debian11
           - distro: debian10
