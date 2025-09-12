@@ -42,6 +42,7 @@ jobs:
     strategy:
       matrix:
         include:
+          - distro: debian13
           - distro: debian12
           - distro: debian11
           - distro: ubuntu24.04
