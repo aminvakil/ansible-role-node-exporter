@@ -44,10 +44,8 @@ jobs:
         include:
           - distro: debian13
           - distro: debian12
-          - distro: debian11
           - distro: ubuntu24.04
           - distro: ubuntu22.04
-          - distro: ubuntu20.04
           - distro: fedora
 
     steps:
